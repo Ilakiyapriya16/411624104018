@@ -11,13 +11,19 @@ body{
 } */
 
 img{
-    height: 500px;
-    width: 500px;
-    border-radius: 500px;
+    height: auto;
+    width: 100%;
 }
 
+@media(max-width: 600px){
+    img{
+        height: auto;
+        width: 100%;
+    }
+
+}
 video{
-    height: 500px;
+   width: 100%;
 }
 
 ol{
@@ -51,10 +57,17 @@ button{
 
 nav{
     display: flex;
-    flex-direction: row;
-    gap: 100px;
+    flex-direction: column;
+    /*gap: 100px;*/
 }
 
+@media(min-width: 1024px){
+    nav{
+        display: flex;
+        flex-direction: row;
+        gap: 100px;
+    }
+}
 #p1{
     font-style: normal;
     font-weight: bolder;
@@ -72,9 +85,37 @@ nav{
 
 .grid{
     display: grid;
-    grid-template-columns: 33% 33% 33%;
 }
 
+@media (min-width: 1024px){
+    .grid{
+        display: grid;
+        grid-template-columns: 33% 33% 33%;
+    }
+    #one{
+        grid-row: 1/2;
+    }
+
+    #two{
+        grid-row: 1/2;
+    }
+
+    #three{
+        grid-row:1/2;
+    }
+
+    #four{
+        grid-row: 2/3;
+    }
+
+    #five{
+        grid-row: 2/3;
+    }
+
+    #six{
+        grid-row: 2/3;
+    }
+}
 .festivals{
     display: grid;
     grid-template-columns: 50% 50%;
